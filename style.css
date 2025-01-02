@@ -12,15 +12,16 @@ body {
 header {
   background: #0078d7;
   color: #fff;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5em;
-  font-weight: 700;
+  font-size: 3em;
+  font-family: 'Caveat', cursive;
 }
 
 header p {
@@ -28,9 +29,29 @@ header p {
   margin-top: 10px;
 }
 
+header .arrow {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
 /* القائمة الرئيسية */
 main {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .cards-list {
@@ -61,6 +82,7 @@ main {
   margin-top: 0;
   font-size: 1.8em;
   color: #0078d7;
+  font-family: 'Caveat', cursive;
 }
 
 .card p {
@@ -95,6 +117,21 @@ footer {
   bottom: 0;
   font-size: 1.1em;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ffdd57;
 }
 
 /* التصميم المتجاوب */
